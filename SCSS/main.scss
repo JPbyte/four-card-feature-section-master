@@ -1,0 +1,305 @@
+//Primary
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+//Neutral
+
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+@mixin centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+
+@keyframes flutuar {
+    0%{
+        transform: scale(1) translateY(0);
+    }
+    50%{
+        transform: scale(1.08) translateY(20px);
+    }
+
+    100%{
+        transform: scale(1) translateY(0);
+    }
+    
+}
+
+@keyframes flutuar-top {
+    0%{
+        transform: scale(1) rotateY(0);
+    }
+    50%{
+        transform: scale(1.08) translateY(-15px);
+    }
+    100%{
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes right {
+    0%{
+        transform: scale(1) translateX(0);
+    }
+    50%{
+        transform: scale(1.08) translateX(20px);
+    }
+    100%{
+        transform: scale(1) translateX(0);
+    }
+    
+}
+
+@keyframes left {
+    0%{
+        transform: scale(1)translateX(0);
+    }
+    50%{
+        transform: scale(1.08) translateX(-20px);
+    }
+    100%{
+        transform: scale(1)translateX(0);
+    }
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    @include centralizar();
+    background-color: $Very-Light-Gray;
+    width: 100%;
+    min-height: 100vh;
+        header{
+            width: 75%;
+            height: 190px;
+            @include centralizar();
+                .header-1{
+                    color: $Very-Dark-Blue;
+                    font-weight: 200;
+                    font-size: 33px;
+                }
+                .header-2{
+                    color: $Very-Dark-Blue;
+                    font-weight: 600;
+                    font-size: 35px;
+                    margin-bottom: 20px;
+                }
+                .header-p{
+                    color: $Grayish-Blue;
+                    text-align: center;
+                    width: 540px;
+                }
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 586px;
+                .card-supervisor{
+                    width: 307px;
+                    height: 239px;
+                    padding: 31px;
+                    position: relative;
+                    margin-right: 30px;
+                    border-radius: 7px;
+                    background-color: white;        
+                    border-top: $Cyan 5px solid;
+                    animation: left 5s infinite;
+                    box-shadow: 5px 5px 15px 5px rgba(69,211,211,0.09);
+                        .supervisor-h3{
+                            color: black;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                        .supervisor-p{
+                            color: $Grayish-Blue;
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
+                        img{
+                           position: absolute;
+                           right: 30px;
+                           bottom: 30px;
+                           animation: left 7s infinite ;
+                           
+                        }
+                    
+                }
+                .card-both{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 300px;
+                    
+                        .card-builder{
+                            height: 239px;
+                            padding: 18px;
+                            border-radius: 7px;
+                            position: relative;
+                            background-color: white;
+                            border-top: $Red 5px solid;
+                            animation: flutuar-top 5s infinite;
+                            box-shadow: 5px 5px 15px 5px rgba(234,83,83,0.09);
+                                .builder-h3{
+                                    color: black;
+                                    font-weight: 600;
+                                    margin-bottom: 10px;
+                                }
+                                .builder-p{
+                                    color: $Grayish-Blue;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+                                img{
+                                    position: absolute;
+                                    right: 30px;
+                                    bottom: 30px;
+                                    animation: flutuar-top 7s infinite;
+                                }
+                                
+                        }
+                        .card-karma{
+                            height: 239px;
+                            padding: 18px;
+                            border-radius: 7px;
+                            margin-top: 30px;
+                            position: relative;
+                            background-color: white;
+                            border-top: $Orange 5px solid;
+                            animation: flutuar 5s infinite;
+                            box-shadow: 5px 5px 15px 5px rgba(252,175,74,0.09);
+                                .karma-h3{
+                                    color: black;
+                                    font-weight: 600;
+                                    margin-bottom: 10px;
+                                }
+                                .karma-p{
+                                    color: $Grayish-Blue;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+                                img{
+                                    position: absolute;
+                                    right: 30px;
+                                    bottom: 30px;
+                                    animation: flutuar 7s infinite;
+                                }
+                        }
+                }
+                .card-calculator{
+                    width: 300px;
+                    height: 239px;
+                    padding: 18px;
+                    margin-left: 30px;
+                    border-radius: 7px;
+                    position: relative;
+                    background-color: white;
+                    box-shadow: 5px 5px 15px 5px rgba(84,158,242,0.09);
+                    border-top: $Blue 5px solid;
+                    animation: right 5s infinite;
+                        .calculator-h3{
+                            color: black;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                        .calculator-p{
+                            color: $Grayish-Blue;
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
+                        img{
+                            position: absolute;
+                            right: 30px;
+                            bottom: 30px;
+                            animation: right 7s infinite;
+                        }
+                }
+        }
+  footer{
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    a{
+        color: #32a313;
+    }  
+}
+  
+ @media (max-width:1050px){
+   
+    footer{
+        font-size: 15px;
+    }
+    header{
+    .header-1{
+        font-size: 21px;
+        margin-top: 96px;
+    }
+    .header-2{
+        font-size: 22px;
+    }
+    .header-p{
+        width: 338px;
+        margin-bottom: 30px;
+    }
+}
+    main{
+        margin-top: 92px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+            .card-supervisor{
+                animation: none;
+                img{
+                    animation: none;
+                }
+                margin:0;
+                margin-bottom: 25px;
+            }
+            .card-both{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                    .card-builder{
+                        animation: none;
+                        img{
+                            animation: none;
+                        }
+                        margin:0;
+                        margin-bottom: 25px;
+                    }
+                    .card-karma{
+                        animation: none;
+                            img{
+                                animation: none;
+                            }
+                            margin:0;
+                            margin-bottom: 25px;
+                    }
+                    
+            }
+            .card-calculator{
+                animation: none;
+                img{
+                    animation: none;
+                }
+                margin:0;
+                margin-bottom: 25px;
+            }
+    }
+ }       
+}
+

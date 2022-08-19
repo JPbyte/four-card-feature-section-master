@@ -1,0 +1,331 @@
+@-webkit-keyframes flutuar {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(20px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes flutuar {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(20px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@-webkit-keyframes flutuar-top {
+  0% {
+    transform: scale(1) rotateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(-15px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes flutuar-top {
+  0% {
+    transform: scale(1) rotateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(-15px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@-webkit-keyframes right {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.08) translateX(20px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+@keyframes right {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.08) translateX(20px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+@-webkit-keyframes left {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.08) translateX(-20px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+@keyframes left {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.08) translateX(-20px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(0deg, 0%, 98%);
+  width: 100%;
+  min-height: 100vh;
+}
+body header {
+  width: 75%;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body header .header-1 {
+  color: hsl(234deg, 12%, 34%);
+  font-weight: 200;
+  font-size: 33px;
+}
+body header .header-2 {
+  color: hsl(234deg, 12%, 34%);
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+body header .header-p {
+  color: hsl(229deg, 6%, 66%);
+  text-align: center;
+  width: 540px;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 586px;
+}
+body main .card-supervisor {
+  width: 307px;
+  height: 239px;
+  padding: 31px;
+  position: relative;
+  margin-right: 30px;
+  border-radius: 7px;
+  background-color: white;
+  border-top: hsl(180deg, 62%, 55%) 5px solid;
+  -webkit-animation: left 5s infinite;
+          animation: left 5s infinite;
+  box-shadow: 5px 5px 15px 5px rgba(69, 211, 211, 0.09);
+}
+body main .card-supervisor .supervisor-h3 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body main .card-supervisor .supervisor-p {
+  color: hsl(229deg, 6%, 66%);
+  font-size: 13px;
+  font-weight: 600;
+}
+body main .card-supervisor img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  -webkit-animation: left 7s infinite;
+          animation: left 7s infinite;
+}
+body main .card-both {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+body main .card-both .card-builder {
+  height: 239px;
+  padding: 18px;
+  border-radius: 7px;
+  position: relative;
+  background-color: white;
+  border-top: hsl(0deg, 78%, 62%) 5px solid;
+  -webkit-animation: flutuar-top 5s infinite;
+          animation: flutuar-top 5s infinite;
+  box-shadow: 5px 5px 15px 5px rgba(234, 83, 83, 0.09);
+}
+body main .card-both .card-builder .builder-h3 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body main .card-both .card-builder .builder-p {
+  color: hsl(229deg, 6%, 66%);
+  font-size: 13px;
+  font-weight: 600;
+}
+body main .card-both .card-builder img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  -webkit-animation: flutuar-top 7s infinite;
+          animation: flutuar-top 7s infinite;
+}
+body main .card-both .card-karma {
+  height: 239px;
+  padding: 18px;
+  border-radius: 7px;
+  margin-top: 30px;
+  position: relative;
+  background-color: white;
+  border-top: hsl(34deg, 97%, 64%) 5px solid;
+  -webkit-animation: flutuar 5s infinite;
+          animation: flutuar 5s infinite;
+  box-shadow: 5px 5px 15px 5px rgba(252, 175, 74, 0.09);
+}
+body main .card-both .card-karma .karma-h3 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body main .card-both .card-karma .karma-p {
+  color: hsl(229deg, 6%, 66%);
+  font-size: 13px;
+  font-weight: 600;
+}
+body main .card-both .card-karma img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  -webkit-animation: flutuar 7s infinite;
+          animation: flutuar 7s infinite;
+}
+body main .card-calculator {
+  width: 300px;
+  height: 239px;
+  padding: 18px;
+  margin-left: 30px;
+  border-radius: 7px;
+  position: relative;
+  background-color: white;
+  box-shadow: 5px 5px 15px 5px rgba(84, 158, 242, 0.09);
+  border-top: hsl(212deg, 86%, 64%) 5px solid;
+  -webkit-animation: right 5s infinite;
+          animation: right 5s infinite;
+}
+body main .card-calculator .calculator-h3 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+body main .card-calculator .calculator-p {
+  color: hsl(229deg, 6%, 66%);
+  font-size: 13px;
+  font-weight: 600;
+}
+body main .card-calculator img {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  -webkit-animation: right 7s infinite;
+          animation: right 7s infinite;
+}
+body footer {
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+body footer a {
+  color: #32a313;
+}
+@media (max-width: 1050px) {
+  body footer {
+    font-size: 15px;
+  }
+  body header .header-1 {
+    font-size: 21px;
+    margin-top: 96px;
+  }
+  body header .header-2 {
+    font-size: 22px;
+  }
+  body header .header-p {
+    width: 338px;
+    margin-bottom: 30px;
+  }
+  body main {
+    margin-top: 92px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  body main .card-supervisor {
+    -webkit-animation: none;
+            animation: none;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  body main .card-supervisor img {
+    -webkit-animation: none;
+            animation: none;
+  }
+  body main .card-both {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .card-both .card-builder {
+    -webkit-animation: none;
+            animation: none;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  body main .card-both .card-builder img {
+    -webkit-animation: none;
+            animation: none;
+  }
+  body main .card-both .card-karma {
+    -webkit-animation: none;
+            animation: none;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  body main .card-both .card-karma img {
+    -webkit-animation: none;
+            animation: none;
+  }
+  body main .card-calculator {
+    -webkit-animation: none;
+            animation: none;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  body main .card-calculator img {
+    -webkit-animation: none;
+            animation: none;
+  }
+}/*# sourceMappingURL=main.css.map */
